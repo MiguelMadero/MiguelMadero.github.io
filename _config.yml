@@ -2,4 +2,5 @@ name: Miguel's Brain Dump
 safe: true
 markdown: redcarpet
 future: false
-show_drafts: true
+lsi: true
+show_drafts: false
