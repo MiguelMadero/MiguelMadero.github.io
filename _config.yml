@@ -1,6 +1,5 @@
-safe: true
-lsi: false
-pygments: true
 name: Miguel's Brain Dump
+safe: true
 markdown: redcarpet
-
+future: false
+show_drafts: true
