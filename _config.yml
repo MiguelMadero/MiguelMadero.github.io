@@ -4,3 +4,4 @@ markdown: redcarpet
 future: false
 lsi: true
 show_drafts: false
+permalink: /:categories/:title/
