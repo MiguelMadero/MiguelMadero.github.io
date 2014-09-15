@@ -5,3 +5,10 @@ future: false
 lsi: true
 show_drafts: false
 permalink: /:categories/:title/
+pygments: true
+about: I am an independent developer from the sunny UK. I dabble in Ruby, play in C and I'm an avid systems administrator.
+urls:
+    - text: github
+      url: https://github.com/MiguelMadero
+    - text: twitter
+      url: https://twitter.com/mamadero

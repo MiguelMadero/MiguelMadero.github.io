@@ -10,35 +10,48 @@
         <!-- syntax highlighting CSS -->
         <link rel="stylesheet" href="/css/syntax.css">
 
+        <!-- Bootstrap core CSS -->
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main.css">
-
     </head>
     <body>
+        <div class="container">
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
+          <div class="col-sm-3">
+            <h1>{{ site.name }}</h1>
+            <img id="about" src="/img/logo.jpg" height="75px" width="75px" /><br />
+
+            <strong>navigation</strong><br />
+            <a href="/">home</a> <br />
+            {% for i in site.urls %}
+              <a class="about" href="{{ i.url }}">{{ i.text }}</a><br />
+            {% endfor %}
+
+            {% if site.about %}
+            <div id="about">
+              <strong>about</strong><br />
+              {{ site.about }}
+            </div>
+            {% endif %}
           </div>
 
-          {{ content }}
+          <div class="col-sm-8 col-offset-1">
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
+            {{ content }}
+
+            <footer>
+              &copy; {{ site.name }}
+              {% if site.github %}
+                - <a href="{{ site.github }}">{{ site.github }}</a>
+              {% endif %}
+              {% if site.twitter %}
+                - <a href="{{ site.twitter }}">{{ site.twitter }}</a>
+              {% endif %}
+            </footer>
           </div>
+
         </div>
 
     </body>
